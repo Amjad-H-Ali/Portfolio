@@ -1,0 +1,666 @@
+* {box-sizing:border-box}
+
+
+body {
+
+	text-align: center;
+	margin:0;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	font-family: 'Raleway', sans-serif;
+
+
+}
+
+#canvas {
+
+	background-color: rgb( 230, 230, 230);
+	display: block;
+}
+
+
+.nav {
+	width: 100%;
+	height: 50px;
+	background: rgb(0, 0, 0, .5);
+	position: fixed;
+	top:0%;
+	display: flex;	
+	z-index: 2;
+}
+
+.nav a {
+	margin: auto;
+    font-size: 25px;
+    color: #fff;
+}
+
+.container {
+	height: 976px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+
+
+
+.octContainer {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.octTexts {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+/*My Picture*/
+
+.octo, .octo div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+}
+
+.octo, .octo div {
+  width: 250px;
+  height: 250px;
+}
+
+.octo {
+  transform: rotate(45deg);
+}
+
+.octo1 {
+  transform: rotate(-45deg);
+}
+
+.meSection {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.meSummary {
+	width: 50%;
+}
+
+.logoContain {
+	width: 60%;
+	height:750px;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.logoContain img {
+	margin: 0 auto;
+	width: 100px;
+    max-height: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.col {
+	display: flex;
+	justify-content: space-around;
+}
+
+.project img {
+    width: 500px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #7FFFD4;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #7FFFD4;
+}
+
+.octoLogo, .octoLogo div {
+	width: 100px;
+	height: 100px;
+}
+
+.octoLogo .octo1 {
+	font-size: 30px;
+	color: #fff;
+	background-color: #7FFFD4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} 
+
+.projects {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	
+}
+
+#mongo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+.contactLogos {
+	width: 60%;
+	margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.logo {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	background-color: #FF80AA;
+	border-radius: 50%;
+	font-size: 30px;
+	color: #fff;
+	box-shadow: 1px 1px 1px #333;
+}
+
+.modalLogos {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: flex-start;
+	/*margin-left: 20px;*/
+}
+
+.modalLogos div {
+
+	/*margin-right: 30px;*/
+}
+
+
+
+/*.contactLogo  {
+	margin-right: 35px;
+}*/
+
+.logoAndLink {
+	width:60%;
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.link{
+	font-size: 20px;
+	color: #333;
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+nav fa {
+	font-size: 60px;
+}
+
+.titleBar {
+	animation-delay: .2s;
+	width:70px;
+	height: 4px;
+	opacity:0;
+	background-color:#333;
+	
+}
+
+
+.slideInRight {
+ 
+  	animation-name: slideinRight;
+	animation-duration: 1.2s;
+	animation-timing-function: ease;
+	/*animation-delay: initial;
+	animation-iteration-count: initial;
+	animation-direction: initial;*/
+	animation-fill-mode: both;
+	/*animation-play-state: initial;*/
+}
+
+@keyframes slideinRight {
+
+0% {
+    opacity: 0;
+    transform: translateX(-500px);
+	}
+
+
+100% {
+    opacity: 1;
+    transform: translateX(0);
+	}
+
+}
+
+.slideInLeft {
+ 
+  	animation-name: slideinLeft;
+	animation-duration: 1.2s;
+	animation-timing-function: ease;
+	/*animation-delay: initial;
+	animation-iteration-count: initial;
+	animation-direction: initial;*/
+	animation-fill-mode: both;
+	/*animation-play-state: initial;*/
+}
+
+@keyframes slideinLeft {
+
+0% {
+    opacity: 0;
+    transform: translateX(500px);
+	}
+
+
+100% {
+    opacity: 1;
+    transform: translateX(0);
+	}
+
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 1.2s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+
+0% {
+    opacity: 0;
+    
+	}
+
+
+100% {
+    opacity: 1;
+	}
+
+}
+
+
+
+.title {
+	/*animation-duration: .6s;*/
+	opacity: 0;
+	margin-top: 75px;
+	color: #444649;
+	font-size: 50px;
+}
+
+.project {
+  position: relative;
+  width:  500px;
+  height: 300px;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:#fff;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color:#FF80AA;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text ul{
+	list-style-type: none;
+
+}
+
+.text ul li {
+	font-size: 17px;
+	color: #FF80AA;
+}
+
+/*Modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    border-radius: 10px;
+    height: auto;
+    width: 40%;
+    box-shadow: 1px 1px 1px #333;
+}
+
+.modalDetails {
+	margin: 0px 30px 30px 30px;
+}
+
+
+.close {
+	cursor: pointer;
+	margin-right:20px;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+	border-radius: 10px 10px 0 0;
+	width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #7B7D7D  ;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	color:#fff;			
+  	background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #333;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.dots {
+	text-align: center;
+}
+
+#details {
+	margins: 0px;
+}
+
+.logoToolContain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.logoToolContain .logo {
+	order:1;
+	align-self: center;
+}
+
+.toolTipText {
+	z-index: 2;
+	opacity: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 15px;
+	height: 35px;
+	/*width: 150px;*/
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+}
+
+
+.logo:hover ~ .toolTipText {
+	transition: .7s;
+	opacity: 1;
+} 
+
+
+
+.links {
+	
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
+
+.flipInX {
+            -webkit-backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            backface-visibility: visible !important;
+            animation-name: flipInX;
+
+
+            background-position: left top;
+            /*padding-top:95px;
+            margin-bottom:60px;*/
+            -webkit-animation-duration: 1s;
+            animation-duration: 1.2s;
+            animation-timing-function: ease;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+
+@keyframes flipInX {
+            0% {
+               transform: perspective(400px) rotateY(90deg); 
+               opacity: 0;
+            }
+            40% {
+                transform: perspective(400px) rotateY(-20deg);
+            }
+            60% {
+               transform: perspective(400px) rotateY(10deg);
+            }
+            80% {
+            	transform:	perspective(400px) rotateY(5deg);
+            }
+            100% {
+                transform: perspective(400px);
+    			opacity: 1;
+            }
+         }  
+
+.octAbouts {
+	opacity: 0;
+	
+}                
+
+#oct1 {
+	animation-delay: .3s;
+}
+
+#oct2 {
+	animation-delay: .6s; 
+}
+
+#oct3 {
+	animation-delay: .9s;
+	
+}
+
+#oct4 {
+	animation-delay: 1.2s; 
+	
+}
+
+#octText1 {
+	animation-delay: .3s;
+}
+
+#octText2 {
+	animation-delay: .6s;
+}
+
+#octText3 {
+	animation-delay: .9s;
+}
+
+#octText4 {
+	animation-delay: 1.2s;
+}
+
+.octText {
+	opacity:0;
+}
+
+.octSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.upArrow {
+	height:82px;
+	width:82px;
+	margin: 0 auto;
+	color:#FF80AA;
+	font-size: 70px;
+}
+
+#octMe, #meSummary {
+	opacity: 0;
+}
+
