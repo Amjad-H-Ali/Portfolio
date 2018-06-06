@@ -8,7 +8,8 @@ const [ octAboutsHTML, octTextsHTML ] = [ document.getElementsByClassName('octAb
 const [ octs, octTexts ] = [ Array.from(octAboutsHTML), Array.from(octTextsHTML) ];
 const [ oct ] = octs;
 const [ octText ] = octTexts;
-const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary ];
+const [ project1, project2, project3, project4 ] = [ document.getElementById('project1'), document.getElementById('project2'), document.getElementById('project3'), document.getElementById('project4') ];
+const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4 ];
 
 
 
@@ -75,7 +76,7 @@ const checkPageY = () => {
 			else if (elem === octText) {
 				octTexts.forEach(octText => addFadeIn(octText));
 			}
-			else if (elem === aboutTitle || elem === skillsTitle || elem === projectTitle || elem === contactTitle || elem === meSummary) {
+			else if (elem === aboutTitle || elem === skillsTitle || elem === projectTitle || elem === contactTitle || elem === meSummary || elem === project2 || elem === project4) {
 				addSlideInLeft(elem);
 			}
 			else {
