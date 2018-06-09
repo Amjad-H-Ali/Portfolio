@@ -165,7 +165,7 @@ body {
 }
 
 
-.contactLogos {
+.logosAndLinks {
 	width: 60%;
 	margin: 0 auto;
     display: flex;
@@ -193,6 +193,13 @@ body {
 	flex-direction: row;
 	justify-content: flex-start;
 	/*margin-left: 20px;*/
+}
+
+.sub-heading {
+	font-size: 25px;
+    margin-top: 50px;
+    color: #FF80AA;
+    opacity: 0;
 }
 
 .modalLogos div {
@@ -311,6 +318,34 @@ nav fa {
     opacity: 1;
 	}
 
+}
+
+.pop {
+	animation-name: pop;
+	animation-duration: 1s;
+	animation-timing-function: initial;
+	animation-fill-mode: both;
+}
+
+@keyframes pop {
+0% {
+    transform: scale(0);
+	}
+
+
+60% {
+    opacity: 1;
+    transform: scale(1.05);
+	}
+
+80% {
+    transform: scale(0.95);
+	}
+
+100% {
+    transform: scale(1);
+    opacity: 1;
+	}
 }
 
 
@@ -517,12 +552,12 @@ nav fa {
 	margins: 0px;
 }
 
-.logoToolContain {
+.logoToolContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
-.logoToolContain .logo {
+.logoToolContainer .logo {
 	order:1;
 	align-self: center;
 }
@@ -663,5 +698,6 @@ nav fa {
 
 #octMe, #meSummary {
 	opacity: 0;
+
 }
 

@@ -9,7 +9,8 @@ const [ octs, octTexts ] = [ Array.from(octAboutsHTML), Array.from(octTextsHTML)
 const [ oct ] = octs;
 const [ octText ] = octTexts;
 const [ project1, project2, project3, project4 ] = [ document.getElementById('project1'), document.getElementById('project2'), document.getElementById('project3'), document.getElementById('project4') ];
-const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4 ];
+const contactSub = document.getElementById('contactSub');
+const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4, contactSub ];
 
 
 
@@ -21,7 +22,7 @@ const addSlideInRight = (element) => {
 
 	if (!(classList.contains('slideInRight'))) {
 
-		classList.add('slideInRight')
+		classList.add('slideInRight');
 	}	
 }
 
@@ -31,7 +32,7 @@ const addSlideInLeft = (element) => {
 
 	if (!(classList.contains('slideInLeft'))) {
 
-		classList.add('slideInLeft')
+		classList.add('slideInLeft');
 	}	
 }
 
@@ -43,19 +44,29 @@ const addFlipInX = (element) => {
 
 	if (!(classList.contains('flipInX'))) {
 
-		classList.add('flipInX')
+		classList.add('flipInX');
 	}	
 }
 
 
 const addFadeIn = (element) => {
-	console.log(this);
+	
 	const {classList} = element;
 
 	if (!(classList.contains('fadeIn'))) {
 
-		classList.add('fadeIn')
+		classList.add('fadeIn');
 	}	
+}
+
+const addPop = (element) => {
+
+	const {classList} = element;
+
+	if (!(classList.contains('pop'))) {
+
+		classList.add('pop');
+	}
 }
 
 
@@ -76,8 +87,11 @@ const checkPageY = () => {
 			else if (elem === octText) {
 				octTexts.forEach(octText => addFadeIn(octText));
 			}
-			else if (elem === aboutTitle || elem === skillsTitle || elem === projectTitle || elem === contactTitle || elem === meSummary || elem === project2 || elem === project4) {
+			else if (elem === aboutTitle || elem === skillsTitle || elem === projectTitle || elem === contactTitle || elem === meSummary || elem === project2 || elem === project4 ) {
 				addSlideInLeft(elem);
+			}
+			else if (elem === contactSub) {
+				addPop(elem);
 			}
 			else {
 				addSlideInRight(elem);
