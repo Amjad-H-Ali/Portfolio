@@ -204,7 +204,7 @@ body {
 
 .modalLogos div {
 
-	/*margin-right: 30px;*/
+	margin-right: 20px;
 }
 
 
@@ -552,35 +552,6 @@ nav fa {
 	margins: 0px;
 }
 
-.logoToolContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-.logoToolContainer .logo {
-	order:1;
-	align-self: center;
-}
-
-.toolTipText {
-	z-index: 2;
-	opacity: 0;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: 15px;
-	height: 35px;
-	/*width: 150px;*/
-	background-color: #333;
-	color:#fff;
-	text-align: center;
-}
-
-
-.logo:hover ~ .toolTipText {
-	transition: .7s;
-	opacity: 1;
-} 
 
 
 
@@ -603,41 +574,41 @@ nav fa {
 
 
 .flipInX {
-            -webkit-backface-visibility: visible !important;
-            -webkit-animation-name: flipInX;
-            backface-visibility: visible !important;
-            animation-name: flipInX;
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    backface-visibility: visible !important;
+    animation-name: flipInX;
 
 
-            background-position: left top;
-            /*padding-top:95px;
-            margin-bottom:60px;*/
-            -webkit-animation-duration: 1s;
-            animation-duration: 1.2s;
-            animation-timing-function: ease;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-         }
+    background-position: left top;
+    /*padding-top:95px;
+    margin-bottom:60px;*/
+    -webkit-animation-duration: 1s;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}	
 
 @keyframes flipInX {
-            0% {
-               transform: perspective(400px) rotateY(90deg); 
-               opacity: 0;
-            }
-            40% {
-                transform: perspective(400px) rotateY(-20deg);
-            }
-            60% {
-               transform: perspective(400px) rotateY(10deg);
-            }
-            80% {
-            	transform:	perspective(400px) rotateY(5deg);
-            }
-            100% {
-                transform: perspective(400px);
-    			opacity: 1;
-            }
-         }  
+    0% {
+       transform: perspective(400px) rotateY(90deg); 
+       opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotateY(-20deg);
+    }
+    60% {
+       transform: perspective(400px) rotateY(10deg);
+    }
+    80% {
+    	transform:	perspective(400px) rotateY(5deg);
+    }
+    100% {
+        transform: perspective(400px);
+		opacity: 1;
+    }
+}  
 
 .octAbouts {
 	opacity: 0;
@@ -705,3 +676,50 @@ nav fa {
 	display: flex;
 	justify-content: center;
 }
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-logos {
+	margin-right: 30px;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
