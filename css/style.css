@@ -728,6 +728,8 @@ nav fa {
 }
 
 .text > button {
+	cursor: pointer;
+	outline: none;
 	height: 30px;
     width: 120px;
     margin-top: 15px;
@@ -735,4 +737,12 @@ nav fa {
     color: #333;
     border-radius: 5px;
     border: 2px solid #66DDAA;
+}
+
+.text > button:hover {
+	font-size: 16.5px;
+	outline: none;
+	color:#fff;
+	background-color: #66DDAA;
+	transition:  .3s ease-in-out;
 }
