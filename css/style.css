@@ -376,7 +376,7 @@ nav fa {
   width: 100%;
   border-radius: 20px;
   opacity: 0;
-  transition: .5s ease;
+  transition:.5s ease;
   background-color:#fff;
 }
 
@@ -384,12 +384,19 @@ nav fa {
   opacity: 1;
 }
 
+.project:hover .text {
+	top:35%;
+}
+.project:hover .overlay> button {
+	bottom:15%;
+}
 .text {
   color:#FF80AA;
   font-size: 15px;
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
+  transition:all .4s ease-in-out;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
@@ -727,19 +734,24 @@ nav fa {
     justify-content: space-between;
 }
 
-.text > button {
+.overlay > button {
 	cursor: pointer;
 	outline: none;
 	height: 30px;
     width: 120px;
-    margin-top: 15px;
    	font-size: 15px;
     color: #333;
     border-radius: 5px;
     border: 2px solid #66DDAA;
+    position: absolute;
+  	bottom:0%;
+  	left: 50%;
+  	transition:all .4s ease-in-out;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
 }
 
-.text > button:hover {
+.overlay > button:hover {
 	font-size: 16.5px;
 	outline: none;
 	color:#fff;
