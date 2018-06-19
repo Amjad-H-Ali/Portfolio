@@ -166,6 +166,7 @@ body {
 
 
 .logosAndLinks {
+	height: 340px;
 	width: 60%;
 	margin: 0 auto;
     display: flex;
