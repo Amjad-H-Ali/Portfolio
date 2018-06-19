@@ -89,7 +89,7 @@ body {
 	margin-right: auto;
 	width: 60%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -701,3 +701,7 @@ nav fa {
 
 }
 
+.col-noSpace {
+	display: flex;
+	justify-content: center;
+}
