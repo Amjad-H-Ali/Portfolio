@@ -25,7 +25,7 @@ const modalContent = {
 		links:["http://vide-ojo.herokuapp.com/", "https://github.com/Amjad-H-Ali/Project-2-Video-App"]
 	},
 	taskManager: {
-		title:"Task Manager",
+		title:"GA Task Manager",
 		images:["image/taskmanager1.png", "image/taskmanager2.png", "image/taskmanager3.png"],
 		details:"A Task Manager for General Assembly students to keep track of their assignments. Users can mark complete assignments.",
 		links:["https://fast-reef-71657.herokuapp.com", "https://github.com/Amjad-H-Ali/Genaral-Assembly-Task-Manager-React"]
