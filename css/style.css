@@ -159,9 +159,7 @@ body {
 }
 
 #mongo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	margin-top: 30px;
 }
 
 
@@ -723,4 +721,8 @@ nav fa {
     justify-content: space-around;
 }
 
-
+.logoContain  .col  div {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
