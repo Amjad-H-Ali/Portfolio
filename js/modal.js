@@ -27,7 +27,7 @@ const modalContent = {
 	taskManager: {
 		title:"Task Manager",
 		images:["image/taskmanager1.png", "image/taskmanager2.png", "image/taskmanager3.png"],
-		details:"",
+		details:"A Task Manager for General Assembly students to keep track of their assignments. Users can mark complete assignments.",
 		links:["https://fast-reef-71657.herokuapp.com", "https://github.com/Amjad-H-Ali/Genaral-Assembly-Task-Manager-React"]
 	},
 	finvestor: {
