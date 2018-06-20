@@ -69,12 +69,14 @@ body {
   margin: 0 auto;
   transform-origin: 50% 50%;
   overflow: hidden;
-}
-
-.octo, .octo div {
   width: 300px;
   height: 300px;
 }
+
+/*.octo, .octo div {
+  width: 300px;
+  height: 300px;
+}*/
 
 .octo {
   transform: rotate(45deg);
