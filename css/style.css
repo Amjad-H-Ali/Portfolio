@@ -61,6 +61,10 @@ body {
 	justify-content: space-around;
 }
 
+.octTexts > div {
+  width: 100%;
+}
+
 
 
 /*My Picture*/
@@ -114,11 +118,11 @@ body {
 .logoContain img {
 	margin: 0 auto;
 	width: 100px;
-    max-height: 100px;
-    padding-bottom: 10px;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
 }
 
 .col {
@@ -143,7 +147,6 @@ body {
 }
 
 .octoLogo .octo1 {
-	font-size: 30px;
 	color: #fff;
 	background-color: #7FFFD4;
 	display: flex;
@@ -663,6 +666,8 @@ nav fa {
 	opacity:0;
 }
 
+
+
 .octSection {
 	display: flex;
 	flex-direction: column;
@@ -762,3 +767,8 @@ nav fa {
 	background-color: #66DDAA;
 	transition:  .3s ease-in-out;
 }
+
+.octo1 > .fa {
+  font-size: 40px;
+}
+
