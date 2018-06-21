@@ -13,7 +13,8 @@ body {
 
 #canvas {
 
-	background-color: rgb( 230, 230, 230);
+	/*background-color: rgb( 230, 230, 230);*/
+  background-color: #000;
 	display: block;
 }
 
@@ -32,6 +33,11 @@ body {
 	margin: auto;
     font-size: 25px;
     color: #fff;
+}
+
+.nav a:hover {
+  transition: .3s;
+  color:#FF80AA;
 }
 
 .container {
@@ -253,7 +259,7 @@ nav fa {
 
 .slideInRight {
  
-  	animation-name: slideinRight;
+  animation-name: slideinRight;
 	animation-duration: 1.2s;
 	animation-timing-function: ease;
 	/*animation-delay: initial;
@@ -280,7 +286,7 @@ nav fa {
 
 .slideInLeft {
  
-  	animation-name: slideinLeft;
+  animation-name: slideinLeft;
 	animation-duration: 1.2s;
 	animation-timing-function: ease;
 	/*animation-delay: initial;
