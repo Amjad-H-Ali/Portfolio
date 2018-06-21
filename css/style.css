@@ -441,13 +441,29 @@ nav fa {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    border: 1px solid #888;
-    border-radius: 10px;
-    height: auto;
-    width: 40%;
-    box-shadow: 1px 1px 1px #333;
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  border-radius: 10px;
+  height: auto;
+  width: 40%;
+  box-shadow: 1px 1px 1px #333;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: .4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-400px; opacity:0;} 
+    to {top:0; opacity:1;}
+}
+
+@keyframes animatetop {
+    from {top:-400px; opacity:0;}
+    to {top:0; opacity:1;}
 }
 
 .modalDetails {
