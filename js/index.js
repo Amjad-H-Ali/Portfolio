@@ -10,9 +10,28 @@ const [ oct ] = octs;
 const [ octText ] = octTexts;
 const [ project1, project2, project3, project4 ] = [ document.getElementById('project1'), document.getElementById('project2'), document.getElementById('project3'), document.getElementById('project4') ];
 const contactSub = document.getElementById('contactSub');
-const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4, contactSub ];
+const nav = document.getElementById('nav');
+const { offsetHeight:navH } = nav;
+const { offsetTop:navBedPos } = document.getElementById('navBed');
+const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4, contactSub];
 
 
+
+const addFixed = () => {
+	const {classList} = nav;
+
+	if (!(classList.contains('fixed'))) {
+		classList.add('fixed');
+	}
+}
+
+const removeFixed = () => {
+	const {classList} = nav;
+
+	if (classList.contains('fixed')) {
+		classList.remove('fixed');
+	}
+}
 
 
 
@@ -71,13 +90,23 @@ const addPop = (element) => {
 
 
 
+
 const checkPageY = () => {
 	
 	const pageY = window.pageYOffset;
-	
+
+	if (pageY >= (navBedPos + navH)) {
+		addFixed();
+	}
+	else if (pageY < navBedPos) {
+		removeFixed();
+	}
+
 	for (let elem of elems) {
 		
 		const { offsetTop:pos } = elem;
+
+		
 		
 		if (pageY > pos-700) { 
 			

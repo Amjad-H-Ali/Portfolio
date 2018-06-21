@@ -12,10 +12,12 @@ body {
 }
 
 #canvas {
-
 	/*background-color: rgb( 230, 230, 230);*/
   background-color: #f6f6f6;
 	display: block;
+}
+#navBed {
+  position: relative;
 }
 
 
@@ -23,11 +25,24 @@ body {
 	width: 100%;
 	height: 50px;
 	background: #3f3f3f;
-	/*position: fixed;*/
+	position: absolute;
+  bottom: 0;
 	top:0%;
 	display: flex;	
-	z-index: 2;
+	z-index: 1;
   border-bottom: 2px solid #FF80AA; 
+}
+
+.fixed {
+  position: fixed;
+  animation: popDown .7s;
+
+}
+
+@keyframes popDown {
+  0% {
+    transform: translateY(-100px);
+  }
 }
 
 .nav a {
