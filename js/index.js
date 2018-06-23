@@ -12,7 +12,6 @@ const [ project1, project2, project3, project4 ] = [ document.getElementById('pr
 const contactSub = document.getElementById('contactSub');
 const nav = document.getElementById('nav');
 const { offsetHeight:navH } = nav;
-const { offsetTop:navBedPos } = document.getElementById('navBed');
 const elems = [ aboutTitle, aboutBar, skillsTitle, skillsBar, projectTitle, projectBar, contactTitle, contactBar, oct, octText, octMe, meSummary, project1, project2, project3, project4, contactSub];
 
 
@@ -95,10 +94,10 @@ const checkPageY = () => {
 	
 	const pageY = window.pageYOffset;
 
-	if (pageY >= (navBedPos + navH)) {
+	if (pageY >= (canvas.height + navH)) {
 		addFixed();
 	}
-	else if (pageY < navBedPos) {
+	else if (pageY < canvas.height) {
 		removeFixed();
 	}
 
