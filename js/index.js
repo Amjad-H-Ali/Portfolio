@@ -90,11 +90,12 @@ const addPop = (element) => {
 
 
 
+
 const checkPageY = () => {
 	
 	const pageY = window.pageYOffset;
 
-	if (pageY >= (canvas.height + navH)) {
+	if (pageY >= (canvas.height + navH - 2)) {
 		addFixed();
 	}
 	else if (pageY < canvas.height) {
@@ -105,7 +106,6 @@ const checkPageY = () => {
 		
 		const { offsetTop:pos } = elem;
 
-		
 		
 		if (pageY > pos-700) { 
 			
@@ -124,64 +124,9 @@ const checkPageY = () => {
 			else {
 				addSlideInRight(elem);
 			}
+
 		}
 	}
-
-
-
-	// for (let )
-
-
-	// const { offsetTop:pos } = elem;
-
-	// if (pageY > pos/2) {
-
-	// 	addSlideIn(elem)
-	// }
-
-	
-
-	// if (pageY > 3500) {
-	// 	addSlideIn(contactBar);
-	// }
-
-	// if (pageY > 3300) {
-	// 	addSlideIn(contactTitle);
-	// }
-
-	// if (pageY > 2740) {
-	// 	addSlideIn(projectBar);
-	// }
-
-	// if (pageY > 2675) {
-	// 	addSlideIn(projectTitle);
-	// }
-
-	// if (pageY > 1630) {
-	// 	addSlideIn(skillsBar);
-	// }
-
-	// if (pageY > 1470) {
-	// 	addSlideIn(skillsTitle);
-	// }
-
-	// if (pageY > 800) {
-	// 	octTexts.forEach(octText => addFadeIn(octText));
-	// }
-
-	// if (pageY > 700) {
-	// 	octs.forEach(oct => addFlipInX(oct));
-		
-	// }
-
-
-	// if (pageY > 660) {
-	// 	addSlideIn(aboutBar);
-	// }
-
-	// if (pageY > 400) {
-	// 	addSlideIn(aboutTitle);
-	// }
 
 }
 
