@@ -35,7 +35,7 @@ body {
 
 .fixed {
   position: fixed;
-  animation: popDown .7s;
+  animation: popDown .5s;
 
 }
 
@@ -45,16 +45,27 @@ body {
   }
 }
 
-.nav a {
-	margin: auto;
-    font-size: 25px;
-    color: #fff;
-}
+
 
 .nav a:hover {
-  transition: .3s;
+  transition: .5s;
   color:#FF80AA;
 }
+
+.nav a {
+  margin: auto;
+  font-size: 25px;
+  
+}
+.current {
+  transition: .5s;
+  color:#FF80AA;
+}
+.nonCurrent {
+  transition: .5s;
+  color: #fff;
+}
+
 
 .container {
 	height: 976px;
