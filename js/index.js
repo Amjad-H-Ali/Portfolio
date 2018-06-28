@@ -108,7 +108,7 @@ const checkPageY = () => {
 
 	
 	if (pageY >= canvasSec && pageY < canvasH + canvasSec) { highLight(anchors[0]);}
-	else if (pageY >= aboutSec && pageY < aboutH + aboutSec) { highLight(anchors[1]);}
+	else if (pageY >= aboutSec  && pageY < aboutH + aboutSec) { highLight(anchors[1]);}
 	else if (pageY >= skillsSec && pageY < skillsH + skillsSec) { highLight(anchors[2]);}
 	else if (pageY >= projSec && pageY < projH + projSec) { highLight(anchors[3]);}
 	else { highLight(anchors[4]);}
