@@ -27,7 +27,7 @@ class QuadTree {
 		this.boundary = boundary;
 		this.capacity = n;
 		this.points = [];
-		this.divided = true;
+		this.divided = false;
 	}
 	subdivide() {
 		const {x, y, w, h} = this.boundary;
@@ -36,10 +36,11 @@ class QuadTree {
 		let se = new Rectangle(x + w/2, y + h/2, w/2, h/2)
 		let sw = new Rectangle(x - w/2, y + h/2, w/2, h/2)
 
-		this.northeast = new QuadTree(ne);
-		this.northwest = new QuadTree(nw);
-		this.southeast = new QuadTree(se);
-		this.southwest = new QuadTree(sw);
+		this.northeast = new QuadTree(ne, this.capacity);
+		this.northwest = new QuadTree(nw, this.capacity);
+		this.southeast = new QuadTree(se, this.capacity);
+		this.southwest = new QuadTree(sw, this.capacity);
+		this.divided = true;
 		
 	}	
 	

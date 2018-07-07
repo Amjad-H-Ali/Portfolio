@@ -2,8 +2,8 @@ let boundary = new Rectangle(200, 200, 200, 200);
 let qt = new QuadTree(boundary, 4);
 
 
-for (let i = 0; i < 1; i ++) {
-	let p = new Point(Math.random(), Math.random());
+for (let i = 0; i < 1000; i ++) {
+	let p = new Point((Math.random() * 200) + 200, (Math.random() * 200) + 200);
 	qt.insert(p);
 }
 
