@@ -10,7 +10,7 @@ class Rectangle {
 		this.x = x;
 		this.y = y; 
 		this.w = w;
-		this.h = x;
+		this.h = h;
 	}
 
 	contains(point) {
