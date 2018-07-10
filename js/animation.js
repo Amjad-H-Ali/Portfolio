@@ -19,4 +19,4 @@ const animate = () => {
 	window.requestAnimationFrame(animate);
 }
 
-// animate();
+animate();

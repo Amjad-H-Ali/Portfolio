@@ -66,7 +66,11 @@ class CircleFactory {
 
 			let yPos = Math.random() * canvas.height;
 
-			const newCircle = new Circle( xPos, yPos, 1, -2); 
+			// const newCircle = new Circle( xPos, yPos, 1, -2);
+
+			// Temporary
+
+			const newCircle = new Circle(100, 100, 1, -2); 
 
 			circles.push(newCircle);
 
@@ -76,7 +80,18 @@ class CircleFactory {
 	moveCircles(circle) {
 
 
-		if (circle.x + circle.speedX > canvas.width - circle.r || circle.x + circle.speedX < circle.r) {
+		// if (circle.x + circle.speedX > canvas.width - circle.r || circle.x + circle.speedX < circle.r) {
+	
+		// 	circle.speedX = -circle.speedX;
+		// }
+
+		// if (circle.y + circle.speedY > canvas.height - circle.r || circle.y + circle.speedY < circle.r) {
+			
+		// 	circle.speedY = -circle.speedY;
+		// }
+
+		// Temporary
+		if (circle.x + circle.speedX > canvas.width - 609|| circle.x + circle.speedX < 0) {
 	
 			circle.speedX = -circle.speedX;
 		}
@@ -97,9 +112,13 @@ class CircleFactory {
 	
 		ctx.beginPath();
 
-		ctx.strokeStyle = '#FF80AA';
+		// ctx.strokeStyle = '#FF80AA';
 
-		ctx.arc(x, y, r, 0, Math.PI * 2 );
+		// ctx.arc(x, y, r, 0, Math.PI * 2 );
+
+		// Temporary Text
+		ctx.font = "30px Arial";
+		ctx.fillText("Animation Coming Soon! Please Scroll Down.",x,y);
 
 		ctx.stroke();
 
@@ -110,7 +129,7 @@ class CircleFactory {
 
 const shape = new CircleFactory
 
-shape.generateCircles(5);
+shape.generateCircles(1);
 
 
 
