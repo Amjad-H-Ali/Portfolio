@@ -775,38 +775,38 @@ nav fa {
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .contact-logos {
 	margin-right: 30px;
 	display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .logoContain  .col  div {
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .overlay > button {
 	cursor: pointer;
 	outline: none;
 	height: 30px;
-    width: 120px;
-   	font-size: 15px;
-    color: #333;
-    border-radius: 5px;
-    border: 2px solid #66DDAA;
-    position: absolute;
-  	bottom:0%;
-  	left: 50%;
-  	transition:all .4s ease-in-out;
-  	transform: translate(-50%, -50%);
-  	-ms-transform: translate(-50%, -50%);
+  width: 120px;
+  font-size: 15px;
+  color: #333;
+  border-radius: 5px;
+  border: 2px solid #66DDAA;
+  position: absolute;
+  bottom:0%;
+  left: 50%;
+  transition:all .4s ease-in-out;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .overlay > button:hover {
@@ -819,5 +819,14 @@ nav fa {
 
 .octo1 > .fa {
   font-size: 40px;
+}
+
+.meSummary > .fa-quote-left, .meSummary > .fa-minus  {
+  font-size: 30px;
+  color: #FF80AA;
+}
+
+.meSummary > .fa-quote-left {
+  margin:0 10px;
 }
 
