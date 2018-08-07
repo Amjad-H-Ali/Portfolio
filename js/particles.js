@@ -112,7 +112,7 @@ class Ball	{
 
 		this.color = getRandColor();
 
-		this.opacity = 0;
+		this.opacity = 0.1;
 	}
 
 	draw () {
@@ -155,11 +155,11 @@ class Ball	{
 		this.x += this.velocity.x;
 		this.y += this.velocity.y;
 
-		if (getDistance(mouse.x, mouse.y, this.x, this.y) < 200 && this.opacity < 0.3) {
-			this.opacity = Math.min(0.3, this.opacity += 0.03);
+		if (getDistance(mouse.x, mouse.y, this.x, this.y) < 250 && this.opacity < 0.7) {
+			this.opacity = Math.min(0.7, this.opacity += 0.03);
 		}
-		else if (this.opacity > 0) {
-			this.opacity = Math.max(0, this.opacity -= 0.03);
+		else if (this.opacity > 0.1) {
+			this.opacity = Math.max(0.1, this.opacity -= 0.03);
 		};
 
 	}
