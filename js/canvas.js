@@ -4,6 +4,7 @@ const canvas = document.getElementById('canvas');
 //get Context
 const ctx = canvas.getContext('2d');
 
+// QuadTree Stuff ToDo
 let boundary = new Rectangle(200, 200, 200, 200);
 let qtree = new QuadTree(boundary, 4);
 
@@ -18,6 +19,7 @@ window.onresize = resizeCanvas;
 window.onload = resizeCanvas;
 
 
+// QuadTree Stuff ToDo
 
 // for (let i = 0; i < 100; i ++) {
 // 	let p = new Point((Math.random() * 200) + 200, (Math.random() * 200) + 200);

@@ -1,22 +1,12 @@
 const animate = () => {
 
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	particles.drawAll();
+	particles.moveAll();
+	particles.collisionDetection();
 
-	const {circles, moveCircles, drawCircles} = shape; 
+	requestAnimationFrame(animate);
 
-	circles.forEach(circle => {
-
-		moveCircles(circle);
-
-		drawCircles(circle);
-
-		circle.detectCollision();
-
-	})
-
-
-
-	window.requestAnimationFrame(animate);
 }
 
 animate();

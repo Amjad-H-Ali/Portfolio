@@ -20,6 +20,8 @@ class Circle {
 
 	detectCollision(){
 
+
+
 		const { x, y, r } = this; 
 
 		const [ left, right, top, bottom ] = [ x, x + r, y, y + r ];
@@ -28,22 +30,21 @@ class Circle {
 
 		circles.forEach(otherCircle => {
 
-
 			if(this !== otherCircle ){
 				const [otherLeft, otherRight, otherTop, otherBottom] = [otherCircle.x, otherCircle.x + otherCircle.r, otherCircle.y, otherCircle.y + otherCircle.r];
 				
 				
 				//If any condition is true, circle is not colliding, ! to return false when true vice versa
-				return(!(left >= otherRight || right <= otherLeft || top >= otherBottom || bottom <= otherTop));
-			}	
+				return (!(left >= otherRight || right <= otherLeft || top >= otherBottom || bottom <= otherTop));
+				
+			};	
 
-		})		
-
-
-	}
+		});		
 
 
-}
+	};
+	
+};
 
 
 
@@ -76,9 +77,9 @@ class CircleFactory {
 
 		}	
 	}
+	
 
 	moveCircles(circle) {
-
 
 		// if (circle.x + circle.speedX > canvas.width - circle.r || circle.x + circle.speedX < circle.r) {
 	
@@ -104,15 +105,16 @@ class CircleFactory {
 		circle.x += circle.speedX;
 
 		circle.y += circle.speedY;
-
 		
 	}
+
+	
 
 	drawCircles({x, y, r}) {
 	
 		ctx.beginPath();
 
-		// ctx.strokeStyle = '#FF80AA';
+		ctx.strokeStyle = '#FF80AA';
 
 		// ctx.arc(x, y, r, 0, Math.PI * 2 );
 
