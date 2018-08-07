@@ -227,6 +227,8 @@ class BallFactory {
 
 }
 
+
+
 const particles = new BallFactory;
 particles.generate(400);
 
