@@ -155,11 +155,11 @@ class Ball	{
 		this.x += this.velocity.x;
 		this.y += this.velocity.y;
 
-		if (getDistance(mouse.x, mouse.y, this.x, this.y) < 150 && this.opacity < 0.3) {
-			this.opacity = Math.min(0.3, this.opacity += 0.01);
+		if (getDistance(mouse.x, mouse.y, this.x, this.y) < 200 && this.opacity < 0.3) {
+			this.opacity = Math.min(0.3, this.opacity += 0.03);
 		}
 		else if (this.opacity > 0) {
-			this.opacity = Math.max(0, this.opacity -= 0.01);
+			this.opacity = Math.max(0, this.opacity -= 0.03);
 		};
 
 	}
