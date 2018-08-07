@@ -12,7 +12,7 @@ const animate = () => {
 
 	const size = canvas.width * ratio;
 
-	const text = 'Hello, I\'m Amjad Ali.';
+	const text = 'Welcome, I\'m Amjad Ali.';
 
 	ctx.font = `bold ${size}px Raleway `;
 
