@@ -1,11 +1,11 @@
 console.log('Collision Detection');
 
 
-const getDistance = (x1, y1, x2, y2) => {
+const getDistance = (x1, y1, x2, y2, radius) => {
 	const xDist = x2 - x1;
 	const yDist = y2 - y1;
 
-	return (Math.sqrt((xDist ** 2) + (yDist ** 2))) - 40;
+	return (Math.sqrt((xDist ** 2) + (yDist ** 2))) - (radius * 2);
 };
 const getRandColor = () => {
 		const colors = ['#7FFFD4', '#FF80AA', '#00FFFF'];
@@ -180,7 +180,7 @@ class Ball	{
 		this.x += this.velocity.x;
 		this.y += this.velocity.y;
 
-		if (getDistance(mouse.x, mouse.y, this.x, this.y) < 250 && this.opacity < 0.7) {
+		if (getDistance(mouse.x, mouse.y, this.x, this.y, this.r) < 250 && this.opacity < 0.7) {
 			this.opacity = Math.min(0.7, this.opacity += 0.03);
 		}
 		else if (this.opacity > 0.1) {
@@ -193,7 +193,7 @@ class Ball	{
 
 		for (let i = 0, len = balls.length; i < len; i ++) {
 			if (this !== balls[i]) {
-				if (getDistance(this.x, this.y, balls[i].x, balls[i].y) < 0) {
+				if (getDistance(this.x, this.y, balls[i].x, balls[i].y, this.r) < 0) {
 					resolveCollision(this, balls[i]);
 				};
 			};
@@ -206,11 +206,11 @@ class BallFactory {
 		this.balls = [];
 	}
 
-	getRandCoor () {
+	getRandCoor (radius) {
 		const {width, height}       = canvas,
 		{balls:{length:bLen},balls} = this,
-		xCoor                       = (Math.random() * (width - 40)) + 20,
-		yCoor                       = (Math.random() * (height - 40)) + 20 ;	
+		xCoor                       = (Math.random() * (width - radius * 2)) + radius,
+		yCoor                       = (Math.random() * (height - radius * 2)) + radius;	
 
 
 		for (let i = 0; i < bLen; i ++) {
@@ -226,11 +226,14 @@ class BallFactory {
 
 
 	generate () {
-		const 	ratio = 0.2,
-				amount = Math.floor(canvas.width * ratio);
+		const 	widthRatio  = 0.2,
+				heightRatio = 0.016,
+				amount      = Math.floor(canvas.width * widthRatio),
+				radius      = Math.floor(canvas.height * heightRatio);
+
 		this.balls = [];
 		for (let i = 0; i < amount; i ++) {
-			const newBall = new Ball(this.getRandCoor(), 20);
+			const newBall = new Ball(this.getRandCoor(radius), radius);
 			this.balls.push(newBall);
 		}	
 	}
@@ -257,7 +260,6 @@ class BallFactory {
 
 
 const particles = new BallFactory;
-particles.generate();
 
 // When user resizes window, resize canvas and generate new amount of particles
 window.onresize = resizeCanvas;
