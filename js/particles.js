@@ -228,20 +228,13 @@ class BallFactory {
 	generate () {
 		const 	ratio = 0.2,
 				amount = Math.floor(canvas.width * ratio);
-
-		const {balls} = this;
+		this.balls = [];
 		for (let i = 0; i < amount; i ++) {
 			const newBall = new Ball(this.getRandCoor(), 20);
-
-			balls.push(newBall);
+			this.balls.push(newBall);
 		}	
 	}
 
-	// When user resizes window
-
-	reGenerate () {
-
-	}
 
 	drawAll () {
 		const {balls} = this;
@@ -266,10 +259,10 @@ class BallFactory {
 const particles = new BallFactory;
 particles.generate();
 
-// window.onresize
+// When user resizes window, resize canvas and generate new amount of particles
+window.onresize = resizeCanvas;
 
-
-
+window.onload = resizeCanvas;
 
 
 

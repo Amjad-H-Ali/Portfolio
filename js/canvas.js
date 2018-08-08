@@ -5,19 +5,15 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // QuadTree Stuff ToDo
-let boundary = new Rectangle(200, 200, 200, 200);
-let qtree = new QuadTree(boundary, 4);
+// let boundary = new Rectangle(200, 200, 200, 200);
+// let qtree = new QuadTree(boundary, 4);
 
-// Setting W and H of canvas (responsive)
+// Setting W and H of canvas (responsive) and generating new amount of particles
 const resizeCanvas = () => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	particles.generate();
 }
-
-window.onresize = resizeCanvas();
-
-window.onload = resizeCanvas();
-
 
 // QuadTree Stuff ToDo
 
@@ -30,13 +26,13 @@ window.onload = resizeCanvas();
 
 // console.log(qtree);
 
-canvas.addEventListener('click', draw = () => {
+// canvas.addEventListener('click', draw = () => {
 
 	
-	let m = new Point(event.clientX, event.clientY);
-	qtree.insert(m);
-	qtree.show();
-});
+// 	let m = new Point(event.clientX, event.clientY);
+// 	qtree.insert(m);
+// 	qtree.show();
+// });
 
 
 
