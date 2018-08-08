@@ -6,6 +6,7 @@ const animate = () => {
 	particles.collisionDetection();
 	requestAnimationFrame(animate);
 	getText();
+
 };
 
 animate();

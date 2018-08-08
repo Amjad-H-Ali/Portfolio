@@ -10,14 +10,13 @@ let qtree = new QuadTree(boundary, 4);
 
 // Setting W and H of canvas (responsive)
 const resizeCanvas = () => {
-	console.log('Resize called');
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 }
 
-window.onresize = resizeCanvas;
+window.onresize = resizeCanvas();
 
-window.onload = resizeCanvas;
+window.onload = resizeCanvas();
 
 
 // QuadTree Stuff ToDo

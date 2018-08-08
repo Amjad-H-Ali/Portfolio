@@ -25,7 +25,7 @@ canvas.addEventListener('mousemove', (e) => {
 
 const getText = () => {
 	ctx.beginPath();
-	const ratio = 40/1000;
+	const ratio = 40/900;
 	const size = canvas.width * ratio;
 
 	const text = 'Welcome, I\'m Amjad Ali.';
@@ -225,13 +225,22 @@ class BallFactory {
 	}
 
 
-	generate (amount) {
+	generate () {
+		const 	ratio = 0.2,
+				amount = Math.floor(canvas.width * ratio);
+
 		const {balls} = this;
 		for (let i = 0; i < amount; i ++) {
 			const newBall = new Ball(this.getRandCoor(), 20);
 
 			balls.push(newBall);
 		}	
+	}
+
+	// When user resizes window
+
+	reGenerate () {
+
 	}
 
 	drawAll () {
@@ -255,7 +264,9 @@ class BallFactory {
 
 
 const particles = new BallFactory;
-particles.generate(400);
+particles.generate();
+
+// window.onresize
 
 
 
