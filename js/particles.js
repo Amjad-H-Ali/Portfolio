@@ -23,6 +23,31 @@ canvas.addEventListener('mousemove', (e) => {
 	mouse.y = e.clientY
 });
 
+const getText = () => {
+	ctx.beginPath();
+	const ratio = 40/1000;
+	const size = canvas.width * ratio;
+
+	const text = 'Welcome, I\'m Amjad Ali.';
+
+	ctx.font = `bold ${size}px Raleway `;
+
+	ctx.fillStyle = "#555";
+
+    const txtCenter = ctx.measureText(text).width/2;
+
+	ctx.fillText(text,canvas.width/2 - txtCenter,canvas.height/2);
+
+
+};
+
+
+	
+
+	
+
+	
+
 /*
 
 * Rotates coordinate sytem for velocities
