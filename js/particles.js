@@ -1,4 +1,3 @@
-console.log('Collision Detection');
 
 
 const getDistance = (x1, y1, x2, y2, radius) => {
@@ -261,10 +260,10 @@ class BallFactory {
 
 const particles = new BallFactory;
 
-// When user resizes window, resize canvas and generate new amount of particles
-window.onresize = resizeCanvas;
+// When user resizes window, resize elements and generate new amount of particles
+window.onresize = setUp;
 
-window.onload = resizeCanvas;
+window.onload = setUp;
 
 
 

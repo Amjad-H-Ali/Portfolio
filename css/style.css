@@ -68,7 +68,7 @@ body {
 
 
 .container {
-	height: 976px;
+	/*height: 976px;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
