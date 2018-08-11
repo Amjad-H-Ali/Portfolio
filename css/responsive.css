@@ -106,5 +106,9 @@
 	.link {
 		font-size: 17px;
 	}
+	.tooltip .tooltiptext {
+		width: 100px;
+		margin-left: -50px;
+	}
 
 }
