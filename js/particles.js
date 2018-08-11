@@ -261,7 +261,14 @@ class BallFactory {
 const particles = new BallFactory;
 
 // When user resizes window, resize elements and generate new amount of particles
-window.onresize = setUp;
+// window.onresize = setUp;
+
+window.addEventListener('resize', () => {
+	// Only if we are not on mobile screen so it won't resize when mobile search bar changes sizes when you scroll.
+	if (window.innerheight > 1366) {
+		setUp();
+	};
+});
 
 window.onload = setUp;
 

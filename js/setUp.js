@@ -10,6 +10,7 @@ const containers = Array.from(document.getElementsByClassName('container'));
 
 // Setting W and H of canvas (responsive) and generating new amount of particles
 const setUp = () => {
+	console.log('setup');
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	particles.generate();
