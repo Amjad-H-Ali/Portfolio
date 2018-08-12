@@ -9,6 +9,10 @@
 		font-size: 25px;
 		margin-top: 65px;
 	}
+	.octSection {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 	.octContainer {
 		width: 100%;
 	}	
@@ -36,6 +40,10 @@
 		margin-top: 5px;
 		margin-bottom: 0;
 	}
+	.octText p {
+  		margin-right: 0px;
+  		margin-left: 0px;
+	}
 	
 	.meSection {
 		width: 100%;
@@ -52,6 +60,9 @@
 	.meSummary {
 		font-size: 10px;
 		padding:0;
+	}
+	.meSummary p {
+		margin:0;
 	}
 
 	.logoContain {
