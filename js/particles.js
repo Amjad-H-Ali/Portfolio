@@ -264,8 +264,24 @@ const particles = new BallFactory;
 // window.onresize = setUp;
 
 window.addEventListener('resize', () => {
-	// Only if we are not on mobile screen so it won't resize when mobile search bar changes sizes when you scroll.
-	if (window.innerheight > 850) {
+
+	const isMobile = {
+    	Android:() => navigator.userAgent.match(/Android/i),
+    	
+    	BlackBerry:() => navigator.userAgent.match(/BlackBerry/i),
+    	
+    	iOS:() => navigator.userAgent.match(/iPhone|iPad|iPod/i),
+    	
+    	Opera:() => navigator.userAgent.match(/Opera Mini/i),
+    	
+    	Windows:() => navigator.userAgent.match(/IEMobile/i),
+    	
+    	any:() => (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
+    };
+
+   	// Only if we are not on mobile screen so it won't resize when mobile search bar changes sizes when you scroll.
+	
+	if (!isMobile.any()) {
 		setUp();
 	};
 });
